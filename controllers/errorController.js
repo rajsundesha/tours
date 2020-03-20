@@ -93,6 +93,7 @@ module.exports = (err, req, res, next) => {
   } else if (process.env.NODE_ENV === 'production') {
     let error = { ...err };
     error.message = err.message;
+    // let error = Object.create(err);
 
     if (error.name === 'CastError') error = handleCasteErrorDB(error);
     if (error.code === 11000) error = handleDuplicateErrorDB(error);

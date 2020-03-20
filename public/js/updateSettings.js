@@ -19,6 +19,10 @@ export const updateSettings = async (data, type) => {
 
     if (res.data.status === 'success') {
       showAlert('success', `${type.toUpperCase()} updated successfully!`);
+      // for reloading the images and page when file uploaded successfully
+      window.setTimeout(() => {
+        location.reload();
+      }, 1000);
     }
   } catch (err) {
     showAlert('error', err.response.data.message);
