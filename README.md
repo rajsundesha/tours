@@ -1,1 +1,3 @@
-# notours-app
+# Notours Applications
+
+Build using modern technologies: node.js, express, mongoDB, mongoose and friends.
